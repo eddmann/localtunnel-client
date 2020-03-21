@@ -1,0 +1,7 @@
+FROM node:13.10.1-alpine3.11
+
+ARG LOCALTUNNEL_CLIENT_VERSION=2.0.0
+
+RUN yarn global add localtunnel@$LOCALTUNNEL_CLIENT_VERSION
+
+ENTRYPOINT ["lt"]
